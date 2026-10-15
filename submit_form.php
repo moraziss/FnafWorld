@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = 'farmilovakup@gmail.com';
+    $to = getenv('CONTACT_EMAIL') ?: 'admin@example.com'; // set CONTACT_EMAIL on the server
     $subject = 'Новое сообщение с формы обратной связи';
     $body = "Имя: $name\nEmail: $email\nСообщение:\n$message";
     $headers = "From: $email\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";

@@ -22,7 +22,7 @@ python -m http.server 8000
 # open http://localhost:8000
 ```
 
-The contact form only works when served through PHP (`php -S localhost:8000`).
+The contact form only works when served through PHP (`php -S localhost:8000`). Set the recipient address via the `CONTACT_EMAIL` environment variable.
 
 `package.json` lists `tailwindcss` as a dev dependency together with `tailwind.config.js`, in case you want to move from the CDN to a compiled stylesheet.
 
